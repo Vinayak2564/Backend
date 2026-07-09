@@ -1,7 +1,7 @@
 const {sumNumber} = require('./sum2');
 const userData = ((req, res) => {
   console.log(req.url, req.method, req.headers);
-  console.log("Correct anwered has been displaying , check the browse once");
+  console.log("Correct answered has been displaying , check the browse once");
 
   if(req.url === '/calculator'){
     res.setHeader('Content-Type', 'text/html');
@@ -12,7 +12,7 @@ const userData = ((req, res) => {
 </head>
 <body>
   <h2>
-    WELCOME TO SIMPLE BACKEND CALCULATOR PROJECT
+    WELCOME TO SIMPLE BACKEND CALCULATOR PROJECT focuses on backend progress
   </h2>
   <form action="/calculator-result" method="POST">
   <input type="number" name="first" placeholder="enter the first number:"<br>
