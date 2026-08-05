@@ -1,6 +1,5 @@
-const http = require('http');
-const fs = require('fs');
-const server = http.createServer((req, res) => {
+const fs = require ('fs');
+const requestHandler = ((req, res) => {
   console.log(req.url, req.method); 
  if (req.url === '/home'){
    res.setHeader('Content-Type', 'text/html');
@@ -62,5 +61,6 @@ const server = http.createServer((req, res) => {
   res.write('</html>');
   res.end();
 });
-server.listen(3001);
-console.log('Server is listening on port 3001');
+
+
+module.exports = requestHandler;
