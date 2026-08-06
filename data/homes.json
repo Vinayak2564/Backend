@@ -1,0 +1,40 @@
+[
+  {
+    "houseName": "mahalingpur",
+    "Price": "900",
+    "rating": "4.5"
+  },
+  {
+    "houseName": "mahalingpur",
+    "Price": "1000",
+    "rating": "5"
+  },
+  {
+    "houseName": "hosapete",
+    "Price": "1500",
+    "rating": "4+"
+  },
+  {
+    "houseName": "bagalkot",
+    "Price": "600",
+    "rating": "3"
+  },
+  {
+    "houseName": "nrayayana nilaya",
+    "price": 999,
+    "location": "mid of the hospete",
+    "rating": 4.9,
+    "photo": "https://housing-images.n7net.in/4f2250e8/1a79638d810e89b53fc33e75219eb8e0/v0/medium/vajra_nature_city-bowrampet-hyderabad-vajra_builders_and_developers.jpeg",
+    "Price": 999,
+    "photoUrl": "https://housing-images.n7net.in/4f2250e8/1a79638d810e89b53fc33e75219eb8e0/v0/medium/vajra_nature_city-bowrampet-hyderabad-vajra_builders_and_developers.jpeg"
+  },
+  {
+    "houseName": "srinivas nilaya",
+    "price": 100,
+    "location": "gaddanakeri",
+    "rating": 3.8,
+    "photo": "https://tse1.mm.bing.net/th/id/OIP.iLTvVsTcqpn8rVgndCT7nwHaE2?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+    "Price": 100,
+    "photoUrl": "https://tse1.mm.bing.net/th/id/OIP.iLTvVsTcqpn8rVgndCT7nwHaE2?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+  }
+]

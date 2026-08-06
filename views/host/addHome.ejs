@@ -1,0 +1,27 @@
+<%- include('../partials/head') %>
+<body class="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(251,113,133,0.18),_transparent_35%),linear-gradient(135deg,_#fff7ed,_#fdf2f8_60%,_#fff1f2)] text-slate-800">
+  <%- include('../partials/nav') %>
+
+  <main class="mx-auto flex min-h-[80vh] max-w-5xl items-center justify-center px-6 py-12">
+    <section class="glass-card hero-3d w-full rounded-[2rem] border border-white/60 bg-white/80 p-8 shadow-2xl sm:p-10">
+      <div class="mb-8 text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.35em] text-rose-500">Host a new stay</p>
+        <h2 class="mt-2 text-3xl font-bold text-slate-800">Share your space with travelers</h2>
+        <p class="mt-2 text-slate-600">Create a polished listing that feels warm, modern, and ready to welcome guests.</p>
+      </div>
+
+      <form action="/host/add-home" method="POST" class="grid gap-4">
+        <div class="grid gap-4 md:grid-cols-2">
+          <input type="text" name="houseName" placeholder="Home name" class="rounded-2xl border border-slate-200 bg-white/90 px-4 py-3 text-sm shadow-sm outline-none transition focus:border-rose-400 focus:ring-2 focus:ring-rose-200">
+          <input type="text" name="Price" placeholder="Price per night" class="rounded-2xl border border-slate-200 bg-white/90 px-4 py-3 text-sm shadow-sm outline-none transition focus:border-rose-400 focus:ring-2 focus:ring-rose-200">
+          <input type="text" name="location" placeholder="Location" class="rounded-2xl border border-slate-200 bg-white/90 px-4 py-3 text-sm shadow-sm outline-none transition focus:border-rose-400 focus:ring-2 focus:ring-rose-200">
+          <input type="text" name="rating" placeholder="Rating" class="rounded-2xl border border-slate-200 bg-white/90 px-4 py-3 text-sm shadow-sm outline-none transition focus:border-rose-400 focus:ring-2 focus:ring-rose-200">
+        </div>
+        <input type="text" name="photo" placeholder="Photo link" class="rounded-2xl border border-slate-200 bg-white/90 px-4 py-3 text-sm shadow-sm outline-none transition focus:border-rose-400 focus:ring-2 focus:ring-rose-200">
+
+        <button type="submit" class="mt-2 rounded-full bg-rose-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-rose-600">Publish home</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
