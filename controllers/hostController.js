@@ -12,24 +12,26 @@ exports.getEditHome = (req, res, next) => {
   const homeId = req.params.homeId;
   const editing = req.query.editing === 'true';
 
-  Home.findById(homeId).then(([homes])  => {
-      console.log("Home not found for editing.");
+  Home.findById(homeId).then(home => { if(!home){
+console.log("Home not found for editing.");
       return res.redirect("/host/host-home-list");
-    }
-  )
-
+  }
     console.log(homeId, editing, home);
     res.render("host/edit-home", {
       home: home,
       pageTitle: "Edit your Home",
       currentPage: "host-homes",
-      editing: editing,
+      editing: editing,  
+    }
+  )
+
+    
     });
   }
 
 
 exports.getHostHomes = (req, res, next) => {
-  Home.fetchAll().then(([registeredHomes]) => {
+  Home.fetchAll().then(registeredHomes => {
     res.render("host/host-home-list", {
       registeredHomes: registeredHomes,
       pageTitle: "Host Homes List",
@@ -42,16 +44,20 @@ exports.getHostHomes = (req, res, next) => {
 exports.postAddHome = (req, res, next) => {
   const { houseName, price, location, rating, photoUrl, description} = req.body;
   const home = new Home(houseName, price, location, rating, photoUrl, description);
-  home.save();
+  home.save().then(() => {
+    console.log("home save successfully");
+  });
 
   res.redirect("/host/host-home-list");
 };
 
 exports.postEditHome = (req, res, next) => {
   const { id, houseName, price, location, rating, photoUrl, description} = req.body;
-  const home = new Home(houseName, price, location, rating, photoUrl, id);
+  const home = new Home(houseName, price, location, rating, photoUrl, description, id);
 
-  home.save();
+  home.save().then(result => {
+    console.log('home updated',result );
+  });
   res.redirect("/host/host-home-list");
 };
 
